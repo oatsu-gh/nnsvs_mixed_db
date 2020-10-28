@@ -67,9 +67,9 @@ if [ ${stage} -le 0 ] && [ ${stop_stage} -ge 0 ]; then
     grep __36_ data/list/utt_list.txt > data/list/$eval_set.list
     grep kagome_kagome_ data/list/utt_list.txt > data/list/$dev_set.list
     # 夏目DBの「かごめかごめ」を追加
-    grep __15_ data/list/utt_list.txt > data/list/$dev_set.list
+    # grep __15_ data/list/utt_list.txt > data/list/$dev_set.list
     grep -v haruga_kita_ data/list/utt_list.txt | grep -v kagome_kagome_ > data/list/$train_set.list
-    grep -v __36_ data/list/utt_list.txt | grep -v __15_ > data/list/$train_set.list
+    # grep -v __36_ data/list/utt_list.txt | grep -v __15_ > data/list/$train_set.list
 fi
 
 if [ ${stage} -le 1 ] && [ ${stop_stage} -ge 1 ]; then
