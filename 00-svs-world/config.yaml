@@ -34,7 +34,7 @@ label_time_unit: "100ns"
 sinsy_dic: "./dic/sinsy"
 
 ## HTS-style question used for extracting musical/linguistic context from musicxml files
-question_path: "./conf/jp_qst001_nnsvs_simple_4-4_mixdb.hed"
+question_path: "./conf/jp_qst001_nnsvs_simple_4-4_mix.hed"
 timelag_in_dim: 282
 duration_in_dim: 282
 acoustic_in_dim: 286
@@ -47,17 +47,17 @@ sample_rate: 96000
 ## Song segmentation by silence durations.
 # TODO: would be better to split songs by phrasal information in the musical scores
 # Split song by silences (in sec)
-segmentation_threshold: 0.5
+segmentation_threshold: 0.6
 # Min duration for a segment
 # note: there could be some execptions (e.g., the last segment of a song)
-segment_min_duration: 5.0
+segment_min_duration: 4.0
 # Force split segments if long silence is found regardless of min_duration
 force_split_threshold: 10
 # Offset correction
 # If True, offset is computed in an entire song
 # otherwise offset is computed for each segment
 global_offset_correction: True
-offset_correction_threshold: 0.5
+offset_correction_threshold: 0.0
 # Time-lag constraints to filter outliers
 timelag_allowed_range: [-20, 19]
 timelag_allowed_range_rest: [-40, 39]
